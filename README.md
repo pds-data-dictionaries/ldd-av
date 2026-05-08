@@ -7,17 +7,17 @@
    potentially mysterious cases.
 -->
 
-# {dictionary name} ({prefix:}) {"Discipline" or "Local"} Dictionary
+# Audio_Video (av:) Discipline Dictionary
 <!-- EXAMPLES
    Spectral (sp:) Discipline Dictionary
    DART Mission (dart:) Local Dictionary
 -->
 
-The {dictionary name} dictionary provides classes and attributes for
-{brief functional description}
+The Audio_Video dictionary provides classes and attributes for
+audio and video products that use Encoded_Audio or Encoded_Video.
 
 ### Steward
-{steward name} ({steward GitHub handle}), {steward node}
+Bob Deen (@rgdeen), Imaging Node (IMG)
 <!-- EXAMPLE
      Anne Raugh (@acraugh), Small Bodies Node (SBN)
 -->
@@ -28,7 +28,7 @@ The {dictionary name} dictionary provides classes and attributes for
 does not, edit the sentence and link accordingly. -->
 The User's Guide and detailed documentation for using this dictionary in
 label design and processing
-are located at https://pds-data-dictionaries.github.io/{repo id}.
+are located at https://pds-data-dictionaries.github.io/ldd-av.
 <!-- EXAMPLE
      are located at https://pds-data-dictionaries.github.io/ldd-template.
 -->
@@ -55,9 +55,9 @@ are located at https://pds-data-dictionaries.github.io/{repo id}.
        * Review the [Change Log] (ChangeLog.md)
        * Review the [Change Log] (src/CHANGELOG.md)
 -->     
-* Download dictionary files from the [PDS Data Dictionaries Page](https://pds.nasa.gov/datastandards/dictionaries/#{dictionary prefix})
+* Download dictionary files from the [PDS Data Dictionaries Page](https://pds.nasa.gov/datastandards/dictionaries/#av)
 * On [GitHub](../../releases/latest)
-* Review the [Change log]({change log file name})
+* Review the [Release history](../../releases)
 
 # About This Repository
 <!-- The top-level directory structure and names must not change, but if
@@ -92,7 +92,7 @@ GitHub repo URL.-->
 
 There is a common place to request enhancements and report problems for
 any PDS-curated dictionary - the [PDS4 Issue Repo](https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose).
-Search for the \[{repo id}\] update request block and click the green
+Search for the \[ldd-av\] update request block and click the green
 "Get Started" button.
 
 ## Contribute Code or documentation
@@ -129,7 +129,7 @@ You will need to install *[LDDTool]* (https://nasa-pds.github.io/pds4-informatio
 you can manually run [LDDTool](https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html) on the IngestLDD using the following command:
 
 ```
-lddtool -lpsnJ {IngestLDD file name}.xml
+lddtool -lpsnJ PDS4_AV_IngestLDD.xml
 ```
 
 # Generating Namespace Documentation
