@@ -778,9 +778,9 @@
       each component of the A/V container.  Note that the Local_Internal_Reference points to the 
       local_identifier in this label of the container to which this metadata applies 
       (useful if there is more than one)</definition>
-    <element_flag>true</element_flag>
+    <element_flag>false</element_flag>
     <DD_Association>
-      <identifier_reference>pds:Local_Internal_Reference</identifier_reference>
+      <identifier_reference>pds.Local_Internal_Reference</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -876,7 +876,7 @@
       (typically the audio or video portions separated).  This class contains metadata 
       common to all Tracks.  Children Audio_Track and Video_Track hold metadata specific 
       to those kinds of tracks.  Other types of tracks (e.g. Metadata) may not have a child.</definition>
-    <element_flag>true</element_flag>
+    <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>handler_class</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -920,7 +920,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>tarck_duration_seconds</identifier_reference>
+      <identifier_reference>track_duration_seconds</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -955,7 +955,7 @@
     <local_identifier>Video_Track</local_identifier>
     <submitter_name>Rafael Alanis</submitter_name>
     <definition>Class describing a Video track</definition>
-    <element_flag>true</element_flag>
+    <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>video_codec</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -1020,7 +1020,7 @@
     <local_identifier>Audio_Track</local_identifier>
     <submitter_name>Rafael Alanis</submitter_name>
     <definition>Class describing an Audio track</definition>
-    <element_flag>true</element_flag>
+    <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>audio_codec</identifier_reference>
       <reference_type>attribute_of</reference_type>
