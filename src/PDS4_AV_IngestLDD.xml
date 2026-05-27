@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+    href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
+  
+  <name>Audio_Video</name>
+  <ldd_version_id>1.0.0.0</ldd_version_id>
+  <dictionary_type>Discipline</dictionary_type>
+  <full_name>Alanis, Rafael</full_name>
+  <steward_id>img</steward_id>
+  <namespace_id>img</namespace_id>
+  <comment>
+    This dictionary contains high level classes and attributes used in audio and
+    visual products. It also contains classes with attributes used during active mission
+    operations. Many of these classes are designed to be extended into local mission dictionaries.
+    
+    ## CHANGE LOG ##
+    1.0.0.0
+    - initial version
+    
+  </comment>
+  <last_modification_date_time>2026-05-20T18:00:00Z</last_modification_date_time>
+
+  <!--                     -->
+  <!--  Attributes: BEGIN  -->
+  <!--                     -->
+  
+  <!-- Start Attributes: for AV_Container Class   -->
+  
+  <DD_Attribute>
+    <name>container_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>container_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Specifies the type (format) of the container in PDS terms.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <DD_Permissible_Value>
+        <value>MP4</value>
+        <value_meaning>MPEG-4 Part 14 file, can contain audio and/or video</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>M4A</value>
+        <value_meaning>MPEG-4 Audio-only file</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>None</value>
+        <value_meaning>No container, e.g. WAV files typically do not have an explicit container</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Other</value>
+        <value_meaning>Non-PDS-compliant container type (should not be used except for Product_External)</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>avg_bitrate</name>
+    <version_id>1.0</version_id>
+    <local_identifier>avg_bitrate</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Overall average bitrate combining both video and audio streams
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Rates</unit_of_measure_type>
+      <specified_unit_id>kilobits/s</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>create_date</name>
+    <version_id>1.0</version_id>
+    <local_identifier>create_date</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Original recording time of the entire stream
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>modify_date</name>
+    <version_id>1.0</version_id>
+    <local_identifier>modify_date</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Indicates when the stream was last edited or saved
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>device_description</name>
+    <version_id>1.0</version_id>
+    <local_identifier>device_description</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Describes the camera or recording device used
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>duration</name>
+    <version_id>1.0</version_id>
+    <local_identifier>duration</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Indicates the time duration of the stream in hh:mm:ss format
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Time</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>duration_seconds</name>
+    <version_id>1.0</version_id>
+    <local_identifier>duration_seconds</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Indicates the time duration of the stream in seconds
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+      <specified_unit_id>s</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>major_brand</name>
+    <version_id>1.0</version_id>
+    <local_identifier>major_brand</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Identifies the primary brand/specification of an ISO base meda file.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>megapixels</name>
+    <version_id>1.0</version_id>
+    <local_identifier>megapixels</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Specifies the size of the detector in megapixels. This is not intended to be 
+      a precise measurement but rather indicates the general size or class of the detector.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>preferred_rate</name>
+    <version_id>1.0</version_id>
+    <local_identifier>preferred_rate</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Indicates the intended playback speed of the video.  A value of 1 typically 
+      represents normal, real-time speed, while other values can indicate slow motion or 
+      fast-forward preferences.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>preferred_volume</name>
+    <version_id>1.0</version_id>
+    <local_identifier>preferred_volume</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Indicates the default playback volume for the stream, with 1.0 indicating normal volume.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>time_scale</name>
+    <version_id>1.0</version_id>
+    <local_identifier>time_scale</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Indicates the timing resolution of the movie, defined as the number of time units that 
+      pass per second.  It dictates the precision of the video's duration and frame rate.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <!-- Start Attributes: for Track Class   -->
+  
+  <DD_Attribute>
+    <name>handler_class</name>
+    <version_id>1.0</version_id>
+    <local_identifier>handler_class</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Defines the high-level functional role of a track, whether it is actual media data or metadata.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <DD_Permissible_Value>
+        <value>Media Handler</value>
+        <value_meaning>Indicates that the track contains actual media data, such as video frames, audio samples, 
+          or timed text</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Data Handler</value>
+        <value_meaning>Indicates that the track serves as a reference or provides a specific way to access data, 
+          often used for metadata streams or hint tracks.</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>handler_description</name>
+    <version_id>1.0</version_id>
+    <local_identifier>handler_description</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Human-readable description of the handler
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>handler_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>handler_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Defines the type of the track: audio, video, metadata, etc. The value 
+      descriptions are human-readable versions; they contain the actual 4-letter code 
+      used in the file in parentheses for reference.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <DD_Permissible_Value>
+        <value>Alias Data</value>
+        <value_meaning>Used primarily in Apple-produced files to indicate core data references (alis)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Clock Reference</value>
+        <value_meaning>Clock reference (crsm)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Hint Track</value>
+        <value_meaning>Hint track used for streaming instructions over a network (hint)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>IPMP</value>
+        <value_meaning>Intellectual Property Management and Protection (ipsm)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>MPEG-7 Stream</value>
+        <value_meaning>MPEG-7 textual metadata stream (m7sm)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>NRT Metadata</value>
+        <value_meaning>Timed metadata track (e.g. GPS, camera sensors, or telemetry) (meta)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Metadata</value>
+        <value_meaning>Metadata Directory (mdir)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Metadata Tags</value>
+        <value_meaning>Metadata stored using a structured key-value pair format (mdta)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>MPEG-J</value>
+        <value_meaning>Motion JPEG 2000 System handler (mjsm)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Object Content</value>
+        <value_meaning>Object Content Info Stream (ocsm)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Object Descriptor</value>
+        <value_meaning>Object Descriptor Stream, deticated to MPEG-4 Systems metadata (odsm)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Private</value>
+        <value_meaning>Track containing proprietary or custom data (priv)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Scene Description</value>
+        <value_meaning>Specialized track defining scene structure, often used for interactive, timed, or animated metadata (sdsm)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Audio Track</value>
+        <value_meaning>Audio track (soun)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Text</value>
+        <value_meaning>Text track containing subtitles, closed captions, etc (older format, often replaced by subt) (text)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Time Code</value>
+        <value_meaning>Time code track (SMPTE, etc) (tmcd)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>URL</value>
+        <value_meaning>Media data referenced externally via a HRL (url )</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Video Track</value>
+        <value_meaning>Video track (vide)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Subpicture</value>
+        <value_meaning>Image-based subtitles (subp)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Metadata</value>
+        <value_meaning>Metadata not synchronized to the real-time playback of audio or video (nrtm)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Picture</value>
+        <value_meaning>Still image data (pict)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Camera Metadata</value>
+        <value_meaning>Camera Motion Metadata Spec (camm)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Metadata</value>
+        <value_meaning>Portable Sample Metatdata (psmd)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Data</value>
+        <value_meaning>Component that identifies and manages raw data for specific media types (data)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Subtitle</value>
+        <value_meaning>Track containing timed text or binary subtitle data (sbtl)</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>content_describes</name>
+    <version_id>1.0</version_id>
+    <local_identifier>content_describes</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Specifies which track ID this trak is describing (typically for metadata tracks)
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>meta_format</name>
+    <version_id>1.0</version_id>
+    <local_identifier>meta_format</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Specifies the data structure of metadata tracks
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>track_id</name>
+    <version_id>1.0</version_id>
+    <local_identifier>track_id</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>ID number for this track
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>track_duration</name>
+    <version_id>1.0</version_id>
+    <local_identifier>track_duration</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Indicates the time duration of this track in hh:mm:ss format
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Time</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>track_duration_seconds</name>
+    <version_id>1.0</version_id>
+    <local_identifier>track_duration_seconds</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Indicates the time duration of this track in seconds
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+      <specified_unit_id>s</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>track_layer</name>
+    <version_id>1.0</version_id>
+    <local_identifier>track_layer</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanisa</submitter_name>
+    <definition>Defines the visual stacking order for different tracks in a video.  
+      Tracks with lower numbers (including negative) appear in front of tracks with higher numbers.  
+      It can also be used to help distinguish between primary and supplementary tracks.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>track_volume</name>
+    <version_id>1.0</version_id>
+    <local_identifier>track_volume</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Indicates the loudness or gain adjustment applied to this track, often used to 
+      normalize volume levels.  A value of 1.0 indicates normal volume.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <!-- Start Attributes: for Video_Track Class   -->
+  
+  <DD_Attribute>
+    <name>video_codec</name>
+    <version_id>1.0</version_id>
+    <local_identifier>video_codec</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Specifies the video codec (Coder/Decoder) used for this data, in PDS terms.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <DD_Permissible_Value>
+        <value>H,264</value>
+        <value_meaning>Standard H.264 video codec (MPEG-4 part 10)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Other</value>
+        <value_meaning>Non-PDS-compliant video codec (should not be used except for Product_External)</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>bit_depth</name>
+    <version_id>1.0</version_id>
+    <local_identifier>bit_depth</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Bits per channel of color information
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>compressor_id</name>
+    <version_id>1.0</version_id>
+    <local_identifier>compressor_id</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>4-letter code for the compressor used.  It may indicate the software rathar than the codec.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>compressor_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>compressor_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>More descriptive name of the compressor used.  This comes directly from the metadata and 
+      has not been converted to standard form like video_codec, but may provide additional information.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>image_height</name>
+    <version_id>1.0</version_id>
+    <local_identifier>image_height</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Height of the video image in pixels in its current form
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>image_width</name>
+    <version_id>1.0</version_id>
+    <local_identifier>image_width</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Width of the video image in pixels in its current form
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>source_image_height</name>
+    <version_id>1.0</version_id>
+    <local_identifier>source_image_height</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Height of the video image in pixels when it was originally captured
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>source_image_width</name>
+    <version_id>1.0</version_id>
+    <local_identifier>source_image_width</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Width of the video image in pixels when it was originally captured
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>video_frame_rate</name>
+    <version_id>1.0</version_id>
+    <local_identifier>video_frame_rate</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Number of video frames per second
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Rates</unit_of_measure_type>
+      <specified_unit_id>frames/s</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>  
+  
+  <!-- Start Attributes: for Audio_Track Class   -->
+
+  <DD_Attribute>
+    <name>audio_codec</name>
+    <version_id>1.0</version_id>
+    <local_identifier>audio_codec</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Specifies the audio codec (Coder/Decoder) used for this data, in PDS terms.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <DD_Permissible_Value>
+        <value>AAC</value>
+        <value_meaning>Advanced Audio Coding (AAC) audio codec (MPEG-4 Part 3)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>WAV</value>
+        <value_meaning>Waveform Audio File (WAV) audio codec</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Other</value>
+        <value_meaning>Non-PDS-compliant audio codec (should not be used except for Product_External)</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>audio_format</name>
+    <version_id>1.0</version_id>
+    <local_identifier>audio_format</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Identifies the specific codec or encoding method used to compress and store the audio data.  
+      This comes directly form the metadata and has not been converted to standard form like audio_codec, 
+      but may provide additional information.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>audio_bits_per_sample</name>
+    <version_id>1.0</version_id>
+    <local_identifier>audio_bits_per_sample</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Number of bits used to represent each audio sample
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>audio_channels</name>
+    <version_id>1.0</version_id>
+    <local_identifier>audio_channels</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Number of independent audio signals, or channels, in the sound track.  
+      Usually 1 indicates mono, 2 indicates stereo, 6 indicates 5.1 surround, etc.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>audio_sample_rate</name>
+    <version_id>1.0</version_id>
+    <local_identifier>audio_sample_rate</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Jane Doe</submitter_name>
+    <definition>Frequencey at which the audio is sampled, measured in Hz
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Frequency</unit_of_measure_type>
+      <specified_unit_id>Hz</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>balance</name>
+    <version_id>1.0</version_id>
+    <local_identifier>balance</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Specifies left/right audio panning. 0 indicates evenly balanced.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>media_language_code</name>
+    <version_id>1.0</version_id>
+    <local_identifier>media_language_code</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Jane Doe</submitter_name>
+    <definition>3-letter ISO 639-2/T code identifying the language of a specific media track 
+      (e.g. "eng" for English, "fra" for French).
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <!--                   -->
+  <!-- Attributes: END   -->
+  <!--                   -->
+  
+  
+  <!--                   -->
+  <!--  Classes: BEGIN   -->
+  <!--                   -->
+  
+  <!-- Class: Audio_Video    -->
+  
+  <DD_Class>
+    <name>Audio_Video</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Audio_Video</local_identifier>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>The Audio_Video class contains metadata for Encoded_Audio or Encoded_Video data. 
+      Most attributes are taken directly from the EXIF/XMP keywords often found in A/V files. If 
+      there is any ambiguity in the definitions, refer to the EXIF/XMP standards for clarification.  
+      This metadata herein is not intended to be comprehensive; it is a subset of the available metadata, 
+      wihch is part of the stream itself.  This subset is intended to facilitate searching using 
+      PDS tools and thus contains those items most likely to be useful for searches.</definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>AV_Container</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+  <!-- Class: AV_Container    -->
+
+  <DD_Class>
+    <name>AV_Container</name>
+    <version_id>1.0</version_id>
+    <local_identifier>AV_Container</local_identifier>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Contains metadata related to the Audio/Video container, and a set of Tracks for 
+      each component of the A/V container.  Note that the Local_Internal_Reference points to the 
+      local_identifier in this label of the container to which this metadata applies 
+      (useful if there is more than one)</definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>pds:Local_Internal_Reference</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>container_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>avg_bitrate</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>create_date</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>modify_date</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>device_description</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>duration</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>duration_seconds</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>major_brand</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>megapixels</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>preferred_rate</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>preferred_volume</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>time_scale</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>Track</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  
+  <!-- Class: Track    -->
+  
+  <DD_Class>
+    <name>Track</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Track</local_identifier>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Class containing information relating to a Track within the stream 
+      (typically the audio or video portions separated).  This class contains metadata 
+      common to all Tracks.  Children Audio_Track and Video_Track hold metadata specific 
+      to those kinds of tracks.  Other types of tracks (e.g. Metadata) may not have a child.</definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>handler_class</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>handler_description</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>handler_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>content_describes</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>meta_format</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>track_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>track_duration</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>tarck_duration_seconds</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>track_layer</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>track_volume</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>XSChoice#</identifier_reference>
+      <identifier_reference>Audio_Track</identifier_reference>
+      <identifier_reference>Video_Track</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+  <!-- Class: Video_Track    -->
+
+  <DD_Class>
+    <name>Video_Track</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Video_Track</local_identifier>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Class describing a Video track</definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>video_codec</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>bit_depth</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>compressor_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>compressor_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>image_height</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>image_width</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>source_image_height</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>source_image_width</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>video_frame_rate</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  
+  <!-- Class: Audio_Track    -->
+  
+  <DD_Class>
+    <name>Audio_Track</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Audio_Track</local_identifier>
+    <submitter_name>Rafael Alanis</submitter_name>
+    <definition>Class describing an Audio track</definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>audio_codec</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>audio_format</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>audio_bits_per_sample</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>audio_channels</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>audio_sample_rate</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>balance</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>media_language_code</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  
+  <!--                   -->
+  <!--   Classes: END    -->
+  <!--                   -->
+  
+  
+</Ingest_LDD>
