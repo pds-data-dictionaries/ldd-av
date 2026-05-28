@@ -1068,6 +1068,20 @@
   <!--                   -->
   <!--   Classes: END    -->
   <!--                   -->
+
   
+  <!-- ======================================================================== -->
+  <!-- BEGIN:  Schematron Rule definitions                                      -->
+  <!-- ======================================================================== -->
+  
+  <DD_Rule>
+    <local_identifier>local_reference_type_check_av</local_identifier>
+    <rule_context>//av:AV_Container/pds:Local_Internal_Reference</rule_context>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>pds:local_reference_type = 'av_container_parameters_to_container_object'</rule_test>
+      <rule_message>In av:AV_Container, Local_Internal_Reference.local_reference_type must be equal to 'av_container_parameters_to_container_object'.</rule_message>
+    </DD_Rule_Statement>
+  </DD_Rule>
   
 </Ingest_LDD>
