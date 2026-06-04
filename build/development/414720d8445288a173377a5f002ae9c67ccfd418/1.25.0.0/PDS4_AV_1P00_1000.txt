@@ -1,0 +1,513 @@
+PDS4 Local Data Dictionary Processing Report
+
+Configuration:
+   LDDTool Version        16.1.3
+   LDD Version Id:        1.0.0.0
+   LDD Label Version Id:  1.0
+   LDD Discipline (T/F):  true
+   LDD Namespace URL:     http://pds.nasa.gov/pds4/
+   LDD URN Prefix:        urn:nasa:pds:
+   Time                   Thu Jun 04 18:38:19 UTC 2026
+   Common Schema          [PDS4_PDS_1P00.xsd]
+   Common Schematron      [PDS4_PDS_1P00.sch]
+   IM Version Id:         1.25.0.0
+   IM Namespace Id:       pds
+   IM Label Version Id:   1.0
+   IM Object Model        [UpperModel.pont]
+   IM Data Dictionary     [dd11179.pins]
+   IM Glossary            [Glossary.pins]
+   IM Document Spec       [DMDocument.pins]
+
+Parameters:
+   Input File             [/home/runner/work/ldd-av/ldd-av/src/PDS4_AV_IngestLDD.xml]
+   PDS Processing         true
+   LDD Processing         true
+   Discipline LDD         true
+   Mission LDD            false
+   Write Attr Elements    false
+   Merge with Master      false
+
+Summary:
+   Classes                5
+   Attributes             38
+   Associations           43
+   Error messages         0
+   Warning messages       0
+   Information messages   0
+
+Detailed validation messages
+
+Parsed Input - Header:
+   LDD Name               Audio_Video
+   LDD Version            1.0.0.0
+   Full Name              Alanis, Rafael
+   Steward                img
+   Namespace Id           av
+   Comment                
+    This dictionary contains high level classes and attributes used in audio and
+    visual products. It also contains classes with attributes used during active mission
+    operations. Many of these classes are designed to be extended into local mission dictionaries.
+    
+    ## CHANGE LOG ## 
+    1.0.0.0
+    - initial version
+    
+  
+   Last Modification Time 2026-05-20T18:00:00Z
+   PDS4 Merge Flag        false
+
+Parsed Input - Attributes:
+
+   name                   container_type
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Specifies the type (format) of the container in PDS terms. 
+
+   name                   avg_bitrate
+   version                1.25
+   value data type        ASCII_Real
+   description            Overall average bitrate combining both video and audio streams 
+   unit of measure type   Units_of_Rates
+
+   name                   create_date
+   version                1.25
+   value data type        ASCII_Date_Time_YMD_UTC
+   description            Original recording time of the entire stream 
+
+   name                   modify_date
+   version                1.25
+   value data type        ASCII_Date_Time_YMD_UTC
+   description            Indicates when the stream was last edited or saved 
+
+   name                   device_description
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Describes the camera or recording device used 
+
+   name                   duration
+   version                1.25
+   value data type        ASCII_Time
+   description            Indicates the time duration of the stream in hh:mm:ss format 
+
+   name                   duration_seconds
+   version                1.25
+   value data type        ASCII_Real
+   description            Indicates the time duration of the stream in seconds 
+   unit of measure type   Units_of_Time
+
+   name                   major_brand
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Identifies the primary brand/specification of an ISO base meda file. 
+
+   name                   megapixels
+   version                1.25
+   value data type        ASCII_Real
+   description            Specifies the size of the detector in megapixels. This is not intended to be a precise measurement but rather indicates the general size or class of the detector. 
+
+   name                   preferred_rate
+   version                1.25
+   value data type        ASCII_Real
+   description            Indicates the intended playback speed of the video. A value of 1 typically represents normal, real-time speed, while other values can indicate slow motion or fast-forward preferences. 
+
+   name                   preferred_volume
+   version                1.25
+   value data type        ASCII_Real
+   description            Indicates the default playback volume for the stream, with 1.0 indicating normal volume. 
+
+   name                   time_scale
+   version                1.25
+   value data type        ASCII_Real
+   description            Indicates the timing resolution of the movie, defined as the number of time units that pass per second. It dictates the precision of the video's duration and frame rate. 
+
+   name                   handler_class
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Defines the high-level functional role of a track, whether it is actual media data or metadata. 
+
+   name                   handler_description
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Human-readable description of the handler 
+
+   name                   handler_type
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Defines the type of the track: audio, video, metadata, etc. The value descriptions are human-readable versions; they contain the actual 4-letter code used in the file in parentheses for reference. 
+
+   name                   content_describes
+   version                1.25
+   value data type        ASCII_Integer
+   description            Specifies which track ID this trak is describing (typically for metadata tracks) 
+
+   name                   meta_format
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Specifies the data structure of metadata tracks 
+
+   name                   track_id
+   version                1.25
+   value data type        ASCII_Integer
+   description            ID number for this track 
+
+   name                   track_duration
+   version                1.25
+   value data type        ASCII_Time
+   description            Indicates the time duration of this track in hh:mm:ss format 
+
+   name                   track_duration_seconds
+   version                1.25
+   value data type        ASCII_Real
+   description            Indicates the time duration of this track in seconds 
+   unit of measure type   Units_of_Time
+
+   name                   track_layer
+   version                1.25
+   value data type        ASCII_Integer
+   description            Defines the visual stacking order for different tracks in a video. Tracks with lower numbers (including negative) appear in front of tracks with higher numbers. It can also be used to help distinguish between primary and supplementary tracks. 
+
+   name                   track_volume
+   version                1.25
+   value data type        ASCII_Real
+   description            Indicates the loudness or gain adjustment applied to this track, often used to normalize volume levels. A value of 1.0 indicates normal volume. 
+
+   name                   video_codec
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Specifies the video codec (Coder/Decoder) used for this data, in PDS terms. 
+
+   name                   bit_depth
+   version                1.25
+   value data type        ASCII_Integer
+   description            Bits per channel of color information 
+
+   name                   compressor_id
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            4-letter code for the compressor used. It may indicate the software rathar than the codec. 
+
+   name                   compressor_name
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            More descriptive name of the compressor used. This comes directly from the metadata and has not been converted to standard form like video_codec, but may provide additional information. 
+
+   name                   image_height
+   version                1.25
+   value data type        ASCII_Integer
+   description            Height of the video image in pixels in its current form 
+
+   name                   image_width
+   version                1.25
+   value data type        ASCII_Integer
+   description            Width of the video image in pixels in its current form 
+
+   name                   source_image_height
+   version                1.25
+   value data type        ASCII_Integer
+   description            Height of the video image in pixels when it was originally captured 
+
+   name                   source_image_width
+   version                1.25
+   value data type        ASCII_Integer
+   description            Width of the video image in pixels when it was originally captured 
+
+   name                   video_frame_rate
+   version                1.25
+   value data type        ASCII_Real
+   description            Number of video frames per second 
+   unit of measure type   Units_of_Frequency
+
+   name                   audio_codec
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Specifies the audio codec (Coder/Decoder) used for this data, in PDS terms. 
+
+   name                   audio_format
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            Identifies the specific codec or encoding method used to compress and store the audio data. This comes directly form the metadata and has not been converted to standard form like audio_codec, but may provide additional information. 
+
+   name                   audio_bits_per_sample
+   version                1.25
+   value data type        ASCII_Integer
+   description            Number of bits used to represent each audio sample 
+
+   name                   audio_channels
+   version                1.25
+   value data type        ASCII_Integer
+   description            Number of independent audio signals, or channels, in the sound track. Usually 1 indicates mono, 2 indicates stereo, 6 indicates 5.1 surround, etc. 
+
+   name                   audio_sample_rate
+   version                1.25
+   value data type        ASCII_Real
+   description            Frequencey at which the audio is sampled, measured in Hz 
+   unit of measure type   Units_of_Frequency
+
+   name                   balance
+   version                1.25
+   value data type        ASCII_Real
+   description            Specifies left/right audio panning. 0 indicates evenly balanced. 
+
+   name                   media_language_code
+   version                1.25
+   value data type        ASCII_Short_String_Preserved
+   description            3-letter ISO 639-2/T code identifying the language of a specific media track (e.g. "eng" for English, "fra" for French). 
+
+Parsed Input - Classes:
+
+   name                   Audio_Video
+   description            The Audio_Video class contains metadata for Encoded_Audio or Encoded_Video data. Most attributes are taken directly from the EXIF/XMP keywords often found in A/V files. If there is any ambiguity in the definitions, refer to the EXIF/XMP standards for clarification. This metadata herein is not intended to be comprehensive; it is a subset of the available metadata, wihch is part of the stream itself. This subset is intended to facilitate searching using PDS tools and thus contains those items most likely to be useful for searches.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      av:AV_Container
+      minimum occurrences   1
+      maximum occurrences   *
+      reference type        component_of
+
+   name                   AV_Container
+   description            Contains metadata related to the Audio/Video container, and a set of Tracks for each component of the A/V container. Note that the Local_Internal_Reference points to the local_identifier in this label of the container to which this metadata applies (useful if there is more than one)
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      av:container_type
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:avg_bitrate
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:create_date
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:modify_date
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:device_description
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:duration
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:duration_seconds
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:major_brand
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:megapixels
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:preferred_rate
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:preferred_volume
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:time_scale
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      pds.Local_Internal_Reference
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      av:Track
+      minimum occurrences   0
+      maximum occurrences   *
+      reference type        component_of
+
+   name                   Track
+   description            Class containing information relating to a Track within the stream (typically the audio or video portions separated). This class contains metadata common to all Tracks. Children Audio_Track and Video_Track hold metadata specific to those kinds of tracks. Other types of tracks (e.g. Metadata) may not have a child.
+   is abstract            false
+   is choice              true
+   subclass of            USER
+
+   Associations
+
+      local identifier      av:handler_class
+      minimum occurrences   0
+      maximum occurrences   *
+      reference type        attribute_of
+
+      local identifier      av:handler_description
+      minimum occurrences   0
+      maximum occurrences   *
+      reference type        attribute_of
+
+      local identifier      av:handler_type
+      minimum occurrences   0
+      maximum occurrences   *
+      reference type        attribute_of
+
+      local identifier      av:content_describes
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:meta_format
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:track_id
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:track_duration
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:track_duration_seconds
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:track_layer
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:track_volume
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:Audio_Track
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      av:Video_Track
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+   name                   Video_Track
+   description            Class describing a Video track
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      av:video_codec
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:bit_depth
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:compressor_id
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:compressor_name
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:image_height
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:image_width
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:source_image_height
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:source_image_width
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:video_frame_rate
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Audio_Track
+   description            Class describing an Audio track
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      av:audio_codec
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:audio_format
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:audio_bits_per_sample
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:audio_channels
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:audio_sample_rate
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:balance
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:media_language_code
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+End of Report
