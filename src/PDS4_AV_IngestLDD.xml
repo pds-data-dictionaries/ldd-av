@@ -494,7 +494,7 @@
       <value_data_type>ASCII_Short_String_Preserved</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
-        <value>H,264</value>
+        <value>H.264</value>
         <value_meaning>Standard H.264 video codec (MPEG-4 part 10)</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -613,8 +613,8 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Rates</unit_of_measure_type>
-      <specified_unit_id>frames/s</specified_unit_id>
+      <unit_of_measure_type>Units_of_Frequency</unit_of_measure_type>
+      <specified_unit_id>Hz</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>  
   
@@ -824,7 +824,7 @@
     <DD_Association>
       <identifier_reference>duration_seconds</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
