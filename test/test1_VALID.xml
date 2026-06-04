@@ -42,11 +42,56 @@
     </Target_Identification>
 
     <Discipline_Area>
-      <example:My_First_LDD>
-        <example:my_first_attribute>1</example:my_first_attribute>
-      </example:My_First_LDD>
-    </Discipline_Area
->
+      <av:Audio_Video>
+        <av:AV_Container>
+          <Local_Internal_Reference>
+            <local_identifier_reference>video</local_identifier_reference>
+          </Local_Internal_Reference>
+          <av:container_type>MP4</av:container_type>
+          <av:create_date>2026:04:06 17:47:52</av:create_date>
+          <av:modify_date>2026:04:06 17:47:52</av:modify_date>
+          <av:major_brand>MP4 v2 [ISO 14496-14]</av:major_brand>
+          <av:megapixels>0.922</av:megapixels>
+          <av:time_scale>90000</av:time_scale>
+          <av:Track>
+            <av:handler_class>Media Handler</av:handler_class>
+            <av:handler_description>VideoHandler</av:handler_description>
+            <av:handler_type>Video Track</av:handler_type>
+            <av:track_id>1</av:track_id>
+            <av:track_layer>0</av:track_layer>
+            <av:track_volume>0.00</av:track_volume>
+            <av:Video_Track>
+              <av:video_codec>H.264</av:video_codec>
+              <av:bit_depth>24</av:bit_depth>
+              <av:compressor_name>H264</av:compressor_name>
+              <av:image_height>720</av:image_height>
+              <av:image_width>1280</av:image_width>
+              <av:source_image_height>720</av:source_image_height>
+              <av:source_image_width>1280</av:source_image_width>
+              <av:video_frame_rate unit="Hz">29.97</av:video_frame_rate>
+            </av:Video_Track>
+          </av:Track>
+          <av:Track>
+            <av:handler_class>Media Handler</av:handler_class>
+            <av:handler_description>AudioHandler</av:handler_description>
+            <av:handler_type>Audio Track</av:handler_type>
+            <av:track_id>2</av:track_id>
+            <av:track_layer>0</av:track_layer>
+            <av:track_volume>1.00</av:track_volume>
+            <av:Audio_Track>
+              <av:audio_codec>AAC</av:audio_codec>
+              <av:audio_format>mp4a</av:audio_format>
+              <av:audio_bits_per_sample>16</av:audio_bits_per_sample>
+              <av:audio_channels>1</av:audio_channels>
+              <av:audio_sample_rate unit="Hz">48000</av:audio_sample_rate>
+              <av:balance>0</av:balance>
+              <av:media_language_code>eng</av:media_language_code>
+            </av:Audio_Track>
+          </av:Track>
+        </av:AV_Container>
+      </av:Audio_Video>
+    </Discipline_Area>
+    
   </Observation_Area>
   <File_Area_Observational>
     <File>
@@ -54,7 +99,7 @@
       <creation_date_time>2019-04-30T19:32:42.000Z</creation_date_time>
     </File>
     <Array_3D_Image>
-      <local_identifier>test</local_identifier>
+      <local_identifier>video</local_identifier>
       <offset unit="byte">11264</offset>
       <axes>3</axes>
       <axis_index_order>Last Index Fastest</axis_index_order>
