@@ -16,7 +16,7 @@
     visual products. It also contains classes with attributes used during active mission
     operations. Many of these classes are designed to be extended into local mission dictionaries.
     
-    ## CHANGE LOG ##
+    ## CHANGE LOG ## 
     1.0.0.0
     - initial version
     
