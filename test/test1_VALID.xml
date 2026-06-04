@@ -46,10 +46,11 @@
         <av:AV_Container>
           <Local_Internal_Reference>
             <local_identifier_reference>video</local_identifier_reference>
+            <local_reference_type>av_container_parameters_to_container_object</local_reference_type>
           </Local_Internal_Reference>
           <av:container_type>MP4</av:container_type>
-          <av:create_date>2026:04:06 17:47:52</av:create_date>
-          <av:modify_date>2026:04:06 17:47:52</av:modify_date>
+          <av:create_date>2026:04:06T17:47:52Z</av:create_date>
+          <av:modify_date>2026:04:06T17:47:52Z</av:modify_date>
           <av:major_brand>MP4 v2 [ISO 14496-14]</av:major_brand>
           <av:megapixels>0.922</av:megapixels>
           <av:time_scale>90000</av:time_scale>
@@ -68,7 +69,7 @@
               <av:image_width>1280</av:image_width>
               <av:source_image_height>720</av:source_image_height>
               <av:source_image_width>1280</av:source_image_width>
-              <av:video_frame_rate unit="Hz">29.97</av:video_frame_rate>
+              <av:video_frame_rate unit="frames/s">29.97</av:video_frame_rate>
             </av:Video_Track>
           </av:Track>
           <av:Track>
