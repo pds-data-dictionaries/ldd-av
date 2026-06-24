@@ -2,9 +2,9 @@
 
 <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMATRONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
 
-<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" 
-  xmlns:av="http://pds.nasa.gov/pds4/av/v1"  
-  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" 
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:av="http://pds.nasa.gov/pds4/av/v1"
+  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
@@ -21,7 +21,7 @@
       <start_date_time>2020-01-01T00:00:00Z</start_date_time>
       <stop_date_time>2022-01-01T00:00:00Z</stop_date_time>
     </Time_Coordinates>
-    
+
     <Investigation_Area>
       <name>None</name>
       <type>Individual Investigation</type>
@@ -46,7 +46,7 @@
         <av:AV_Container>
           <Local_Internal_Reference>
             <local_identifier_reference>video</local_identifier_reference>
-            <local_reference_type>av_container_parameters_to_container_object</local_reference_type>
+            <local_reference_type>av_container_parameters_to_data_object</local_reference_type>
           </Local_Internal_Reference>
           <av:container_type>MP4</av:container_type>
           <av:create_date>2026-04-06T17:47:52Z</av:create_date>
@@ -92,7 +92,7 @@
         </av:AV_Container>
       </av:Audio_Video>
     </Discipline_Area>
-    
+
   </Observation_Area>
   <File_Area_Observational>
     <File>

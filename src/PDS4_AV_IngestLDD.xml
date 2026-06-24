@@ -118,7 +118,7 @@
     <definition>Indicates the time duration of the stream in hh:mm:ss format </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Time</value_data_type>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1039,6 +1039,38 @@
       <rule_test>pds:local_reference_type = 'av_container_parameters_to_data_object'</rule_test>
       <rule_message>In av:AV_Container, Local_Internal_Reference.local_reference_type must be equal to
         'av_container_parameters_to_data_object'.</rule_message>
+    </DD_Rule_Statement>
+  </DD_Rule>
+
+  <DD_Rule>
+    <local_identifier>duration_format_rule</local_identifier>
+    <rule_context>//av:AV_Container</rule_context>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test> if ( matches(av:duration, '^([0-9]+)(\.([0-9]+))?$') or matches(av:duration,
+        '^([0-9]{0,4}[0-9]):[0-5][0-9]:([0-5][0-9])(\.([0-9]+))?$') or matches(av:duration,
+        '^[0-9]+:([0-5][0-9])(\.([0-9]+))?$') ) then true() else false() </rule_test>
+      <rule_message>In av:AV_Container, duration must be in HHH:MM:SS.SSS format</rule_message>
+      <rule_description> This allows for a loose formatting based on ASCII_Time, but allowing for seconds, minutes, or
+        hours being the leading component. Seconds can be arbitrarily large, unless preceeded with minutes in which case
+        seconds is limited to 59. Likewise, minutes can be arbitrarily large, unless preceeded with hours. Hours can be
+        any size. Seconds may optionally include a fractional component.</rule_description>
+    </DD_Rule_Statement>
+  </DD_Rule>
+
+  <DD_Rule>
+    <local_identifier>track_duration_format_rule</local_identifier>
+    <rule_context>//av:Track</rule_context>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test> if ( matches(av:track_duration, '^([0-9]+)(\.([0-9]+))?$') or matches(av:track_duration,
+        '^([0-9]{0,4}[0-9]):[0-5][0-9]:([0-5][0-9])(\.([0-9]+))?$') or matches(av:track_duration,
+        '^[0-9]+:([0-5][0-9])(\.([0-9]+))?$') ) then true() else false() </rule_test>
+      <rule_message>In av:Track, duration must be in HHH:MM:SS.SSS format</rule_message>
+      <rule_description> This allows for a loose formatting based on ASCII_Time, but allowing for seconds, minutes, or
+        hours being the leading component. Seconds can be arbitrarily large, unless preceeded with minutes in which case
+        seconds is limited to 59. Likewise, minutes can be arbitrarily large, unless preceeded with hours. Hours can be
+        any size. Seconds may optionally include a fractional component.</rule_description>
     </DD_Rule_Statement>
   </DD_Rule>
 
