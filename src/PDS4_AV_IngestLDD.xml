@@ -44,11 +44,15 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>None</value>
-        <value_meaning>No container, e.g. WAV files typically do not have an explicit container</value_meaning>
+        <value_meaning>No container, e.g. an elementary data stream</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Other</value>
         <value_meaning>Non-PDS-compliant container type (should not be used except for Product_External)</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>WAV</value>
+        <value_meaning>Waveform Audio File Format, Audio-only file</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
