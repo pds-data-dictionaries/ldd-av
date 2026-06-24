@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Jun 04 18:38:19 UTC 2026
+   Time                   Wed Jun 24 22:45:13 UTC 2026
    Common Schema          [PDS4_PDS_1P00.xsd]
    Common Schematron      [PDS4_PDS_1P00.sch]
    IM Version Id:         1.25.0.0
@@ -43,16 +43,9 @@ Parsed Input - Header:
    Full Name              Alanis, Rafael
    Steward                img
    Namespace Id           av
-   Comment                
-    This dictionary contains high level classes and attributes used in audio and
-    visual products. It also contains classes with attributes used during active mission
-    operations. Many of these classes are designed to be extended into local mission dictionaries.
-    
-    ## CHANGE LOG ## 
-    1.0.0.0
-    - initial version
-    
-  
+   Comment                 This dictionary contains high level classes and attributes used in audio and visual products. It also
+    contains classes with attributes used during active mission operations. Many of these classes are designed to be
+    extended into local mission dictionaries. ## CHANGE LOG ## 1.0.0.0 - initial version 
    Last Modification Time 2026-05-20T18:00:00Z
    PDS4 Merge Flag        false
 
@@ -86,7 +79,7 @@ Parsed Input - Attributes:
 
    name                   duration
    version                1.25
-   value data type        ASCII_Time
+   value data type        ASCII_Short_String_Preserved
    description            Indicates the time duration of the stream in hh:mm:ss format 
 
    name                   duration_seconds

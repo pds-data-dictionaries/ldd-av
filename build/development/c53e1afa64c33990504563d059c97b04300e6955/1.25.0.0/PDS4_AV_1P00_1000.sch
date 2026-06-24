@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:av  Version:1.0.0.0 - Thu Jun 04 18:38:19 UTC 2026 -->
+  <!-- PDS4 Schematron for Name Space Id:av  Version:1.0.0.0 - Wed Jun 24 22:45:13 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.25.0.0 - System Build 16.0	 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -19,10 +19,29 @@
 		   <!--        merged together in the rules below.       -->
 		   <!-- ================================================ -->
   <sch:pattern>
+    <sch:rule context="//av:AV_Container">
+      <sch:assert test=" if ( not(av:duration) or matches(av:duration, '^([0-9]+)(\.([0-9]+))?$') or matches(av:duration,
+        '^([0-9]{0,4}[0-9]):[0-5][0-9]:([0-5][0-9])(\.([0-9]+))?$') or matches(av:duration,
+        '^[0-9]+:([0-5][0-9])(\.([0-9]+))?$') ) then true() else false() ">
+        <title>//av:AV_Container/Rule</title>
+        In av:AV_Container, duration must be in HHH:MM:SS.SSS format</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="//av:AV_Container/pds:Local_Internal_Reference">
-      <sch:assert test="pds:local_reference_type = 'av_container_parameters_to_container_object'">
+      <sch:assert test="pds:local_reference_type = 'av_container_parameters_to_data_object'">
         <title>//av:AV_Container/pds:Local_Internal_Reference/Rule</title>
-        In av:AV_Container, Local_Internal_Reference.local_reference_type must be equal to 'av_container_parameters_to_container_object'.</sch:assert>
+        In av:AV_Container, Local_Internal_Reference.local_reference_type must be equal to
+        'av_container_parameters_to_data_object'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="//av:Track">
+      <sch:assert test=" if ( not(av:track_duration) or matches(av:track_duration, '^([0-9]+)(\.([0-9]+))?$') or
+        matches(av:track_duration, '^([0-9]{0,4}[0-9]):[0-5][0-9]:([0-5][0-9])(\.([0-9]+))?$') or
+        matches(av:track_duration, '^[0-9]+:([0-5][0-9])(\.([0-9]+))?$') ) then true() else false() ">
+        <title>//av:Track/Rule</title>
+        In av:Track, duration must be in HHH:MM:SS.SSS format</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -34,9 +53,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="av:AV_Container/av:container_type">
-      <sch:assert test=". = ('M4A', 'MP4', 'None', 'Other')">
+      <sch:assert test=". = ('M4A', 'MP4', 'None', 'Other', 'WAV')">
         <title>av:AV_Container/av:container_type/av:container_type</title>
-        The attribute av:AV_Container/av:container_type must be equal to one of the following values 'M4A', 'MP4', 'None', 'Other'.</sch:assert>
+        The attribute av:AV_Container/av:container_type must be equal to one of the following values 'M4A', 'MP4', 'None', 'Other', 'WAV'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
