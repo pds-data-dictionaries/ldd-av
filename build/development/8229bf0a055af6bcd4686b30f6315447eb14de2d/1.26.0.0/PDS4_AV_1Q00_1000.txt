@@ -7,10 +7,10 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Jun 25 16:23:28 UTC 2026
-   Common Schema          [PDS4_PDS_1P00.xsd]
-   Common Schematron      [PDS4_PDS_1P00.sch]
-   IM Version Id:         1.25.0.0
+   Time                   Thu Jun 25 21:24:10 UTC 2026
+   Common Schema          [PDS4_PDS_1Q00.xsd]
+   Common Schematron      [PDS4_PDS_1Q00.sch]
+   IM Version Id:         1.26.0.0
    IM Namespace Id:       pds
    IM Label Version Id:   1.0
    IM Object Model        [UpperModel.pont]
@@ -52,197 +52,197 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   container_type
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Specifies the type (format) of the container in PDS terms. 
 
    name                   avg_bitrate
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Overall average bitrate combining both video and audio streams 
    unit of measure type   Units_of_Rates
 
    name                   create_date
-   version                1.25
+   version                1.26
    value data type        ASCII_Date_Time_YMD_UTC
    description            Original recording time of the entire stream 
 
    name                   modify_date
-   version                1.25
+   version                1.26
    value data type        ASCII_Date_Time_YMD_UTC
    description            Indicates when the stream was last edited or saved 
 
    name                   device_description
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Describes the camera or recording device used 
 
    name                   duration
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Indicates the time duration of the stream in hh:mm:ss format 
 
    name                   duration_seconds
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Indicates the time duration of the stream in seconds 
    unit of measure type   Units_of_Time
 
    name                   major_brand
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Identifies the primary brand/specification of an ISO base meda file. 
 
    name                   megapixels
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Specifies the size of the detector in megapixels. This is not intended to be a precise measurement but rather indicates the general size or class of the detector. 
 
    name                   preferred_rate
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Indicates the intended playback speed of the video. A value of 1 typically represents normal, real-time speed, while other values can indicate slow motion or fast-forward preferences. 
 
    name                   preferred_volume
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Indicates the default playback volume for the stream, with 1.0 indicating normal volume. 
 
    name                   time_scale
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Indicates the timing resolution of the movie, defined as the number of time units that pass per second. It dictates the precision of the video's duration and frame rate. 
 
    name                   handler_class
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Defines the high-level functional role of a track, whether it is actual media data or metadata. 
 
    name                   handler_description
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Human-readable description of the handler 
 
    name                   handler_type
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Defines the type of the track: audio, video, metadata, etc. The value descriptions are human-readable versions; they contain the actual 4-letter code used in the file in parentheses for reference. 
 
    name                   content_describes
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            Specifies which track ID this trak is describing (typically for metadata tracks) 
 
    name                   meta_format
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Specifies the data structure of metadata tracks 
 
    name                   track_id
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            ID number for this track 
 
    name                   track_duration
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Indicates the time duration of this track in hh:mm:ss format 
 
    name                   track_duration_seconds
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Indicates the time duration of this track in seconds 
    unit of measure type   Units_of_Time
 
    name                   track_layer
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            Defines the visual stacking order for different tracks in a video. Tracks with lower numbers (including negative) appear in front of tracks with higher numbers. It can also be used to help distinguish between primary and supplementary tracks. 
 
    name                   track_volume
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Indicates the loudness or gain adjustment applied to this track, often used to normalize volume levels. A value of 1.0 indicates normal volume. 
 
    name                   video_codec
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Specifies the video codec (Coder/Decoder) used for this data, in PDS terms. 
 
    name                   bit_depth
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            Bits per channel of color information 
 
    name                   compressor_id
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            4-letter code for the compressor used. It may indicate the software rathar than the codec. 
 
    name                   compressor_name
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            More descriptive name of the compressor used. This comes directly from the metadata and has not been converted to standard form like video_codec, but may provide additional information. 
 
    name                   image_height
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            Height of the video image in pixels in its current form 
 
    name                   image_width
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            Width of the video image in pixels in its current form 
 
    name                   source_image_height
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            Height of the video image in pixels when it was originally captured 
 
    name                   source_image_width
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            Width of the video image in pixels when it was originally captured 
 
    name                   video_frame_rate
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Number of video frames per second 
    unit of measure type   Units_of_Frequency
 
    name                   audio_codec
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Specifies the audio codec (Coder/Decoder) used for this data, in PDS terms. 
 
    name                   audio_format
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            Identifies the specific codec or encoding method used to compress and store the audio data. This comes directly form the metadata and has not been converted to standard form like audio_codec, but may provide additional information. 
 
    name                   audio_bits_per_sample
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            Number of bits used to represent each audio sample 
 
    name                   audio_channels
-   version                1.25
+   version                1.26
    value data type        ASCII_Integer
    description            Number of independent audio signals, or channels, in the sound track. Usually 1 indicates mono, 2 indicates stereo, 6 indicates 5.1 surround, etc. 
 
    name                   audio_sample_rate
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Frequencey at which the audio is sampled, measured in Hz 
    unit of measure type   Units_of_Frequency
 
    name                   balance
-   version                1.25
+   version                1.26
    value data type        ASCII_Real
    description            Specifies left/right audio panning. 0 indicates evenly balanced. 
 
    name                   media_language_code
-   version                1.25
+   version                1.26
    value data type        ASCII_Short_String_Preserved
    description            3-letter ISO 639-2/T code identifying the language of a specific media track (e.g. "eng" for English, "fra" for French). 
 
