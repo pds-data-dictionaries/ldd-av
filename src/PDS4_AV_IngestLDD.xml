@@ -407,7 +407,7 @@
     <definition>Indicates the time duration of this track in hh:mm:ss format </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Time</value_data_type>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
