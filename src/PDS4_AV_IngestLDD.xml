@@ -32,7 +32,7 @@
     <definition>Specifies the type (format) of the container in PDS terms. </definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>MP4</value>
@@ -105,7 +105,7 @@
     <definition>Describes the camera or recording device used </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -118,7 +118,7 @@
     <definition>Indicates the time duration of the stream in hh:mm:ss format </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -145,7 +145,7 @@
     <definition>Identifies the primary brand/specification of an ISO base meda file. </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -216,7 +216,7 @@
     <definition>Defines the high-level functional role of a track, whether it is actual media data or metadata. </definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Media Handler</value>
@@ -239,7 +239,7 @@
     <definition>Human-readable description of the handler </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -253,7 +253,7 @@
       versions; they contain the actual 4-letter code used in the file in parentheses for reference. </definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Alias Data</value>
@@ -381,7 +381,7 @@
     <definition>Specifies the data structure of metadata tracks </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -394,7 +394,7 @@
     <definition>ID number for this track </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -407,7 +407,7 @@
     <definition>Indicates the time duration of this track in hh:mm:ss format </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -466,7 +466,7 @@
     <definition>Specifies the video codec (Coder/Decoder) used for this data, in PDS terms. </definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>H.264</value>
@@ -500,7 +500,7 @@
     <definition>4-letter code for the compressor used. It may indicate the software rathar than the codec. </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -514,7 +514,7 @@
       converted to standard form like video_codec, but may provide additional information. </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -596,7 +596,7 @@
     <definition>Specifies the audio codec (Coder/Decoder) used for this data, in PDS terms. </definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>AAC</value>
@@ -623,7 +623,7 @@
       additional information. </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -691,7 +691,7 @@
       "fra" for French). </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
