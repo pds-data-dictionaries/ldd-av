@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Jun 25 21:24:10 UTC 2026
+   Time                   Mon Jun 29 23:53:09 UTC 2026
    Common Schema          [PDS4_PDS_1Q00.xsd]
    Common Schematron      [PDS4_PDS_1Q00.sch]
    IM Version Id:         1.26.0.0
@@ -53,7 +53,7 @@ Parsed Input - Attributes:
 
    name                   container_type
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Specifies the type (format) of the container in PDS terms. 
 
    name                   avg_bitrate
@@ -74,12 +74,12 @@ Parsed Input - Attributes:
 
    name                   device_description
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Describes the camera or recording device used 
 
    name                   duration
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Indicates the time duration of the stream in hh:mm:ss format 
 
    name                   duration_seconds
@@ -90,7 +90,7 @@ Parsed Input - Attributes:
 
    name                   major_brand
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Identifies the primary brand/specification of an ISO base meda file. 
 
    name                   megapixels
@@ -115,17 +115,17 @@ Parsed Input - Attributes:
 
    name                   handler_class
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Defines the high-level functional role of a track, whether it is actual media data or metadata. 
 
    name                   handler_description
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Human-readable description of the handler 
 
    name                   handler_type
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Defines the type of the track: audio, video, metadata, etc. The value descriptions are human-readable versions; they contain the actual 4-letter code used in the file in parentheses for reference. 
 
    name                   content_describes
@@ -135,17 +135,17 @@ Parsed Input - Attributes:
 
    name                   meta_format
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Specifies the data structure of metadata tracks 
 
    name                   track_id
    version                1.26
-   value data type        ASCII_Integer
+   value data type        ASCII_Short_String_Collapsed
    description            ID number for this track 
 
    name                   track_duration
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Indicates the time duration of this track in hh:mm:ss format 
 
    name                   track_duration_seconds
@@ -166,7 +166,7 @@ Parsed Input - Attributes:
 
    name                   video_codec
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Specifies the video codec (Coder/Decoder) used for this data, in PDS terms. 
 
    name                   bit_depth
@@ -176,12 +176,12 @@ Parsed Input - Attributes:
 
    name                   compressor_id
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            4-letter code for the compressor used. It may indicate the software rathar than the codec. 
 
    name                   compressor_name
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            More descriptive name of the compressor used. This comes directly from the metadata and has not been converted to standard form like video_codec, but may provide additional information. 
 
    name                   image_height
@@ -212,12 +212,12 @@ Parsed Input - Attributes:
 
    name                   audio_codec
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Specifies the audio codec (Coder/Decoder) used for this data, in PDS terms. 
 
    name                   audio_format
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            Identifies the specific codec or encoding method used to compress and store the audio data. This comes directly form the metadata and has not been converted to standard form like audio_codec, but may provide additional information. 
 
    name                   audio_bits_per_sample
@@ -243,7 +243,7 @@ Parsed Input - Attributes:
 
    name                   media_language_code
    version                1.26
-   value data type        ASCII_Short_String_Preserved
+   value data type        ASCII_Short_String_Collapsed
    description            3-letter ISO 639-2/T code identifying the language of a specific media track (e.g. "eng" for English, "fra" for French). 
 
 Parsed Input - Classes:
