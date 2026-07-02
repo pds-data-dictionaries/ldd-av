@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon Jun 29 23:53:09 UTC 2026
+   Time                   Thu Jul 02 18:15:43 UTC 2026
    Common Schema          [PDS4_PDS_1Q00.xsd]
    Common Schematron      [PDS4_PDS_1Q00.sch]
    IM Version Id:         1.26.0.0
@@ -46,7 +46,7 @@ Parsed Input - Header:
    Comment                 This dictionary contains high level classes and attributes used in audio and visual products. It also
     contains classes with attributes used during active mission operations. Many of these classes are designed to be
     extended into local mission dictionaries. ## CHANGE LOG ## 1.0.0.0 - initial version 
-   Last Modification Time 2026-05-20T18:00:00Z
+   Last Modification Time 2026-07-02T08:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -416,7 +416,7 @@ Parsed Input - Classes:
    Associations
 
       local identifier      av:video_codec
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 

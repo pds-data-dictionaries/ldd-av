@@ -3,14 +3,14 @@ PDS Validate Tool Report
 
 Configuration:
    Version      4.2.0
-   Date         2026-06-29T23:53:21Z
-   CLI args     -R pds4.label --skip-content-validation -x /home/runner/work/ldd-av/ldd-av/build/development/628282f128073755526a82b7a8d6e3b089c855b6/1.26.0.0/PDS4_AV_1Q00_1000.xsd /tmp/PDS4_PDS_1Q00.xsd -S /home/runner/work/ldd-av/ldd-av/build/development/628282f128073755526a82b7a8d6e3b089c855b6/1.26.0.0/PDS4_AV_1Q00_1000.sch /tmp/PDS4_PDS_1Q00.sch -t /home/runner/work/ldd-av/ldd-av/test//test1_VALID.xml
+   Date         2026-07-02T18:15:56Z
+   CLI args     -R pds4.label --skip-content-validation -x /home/runner/work/ldd-av/ldd-av/build/development/353cff8c31065136934a349710c69b5916016acd/1.26.0.0/PDS4_AV_1Q00_1000.xsd /tmp/PDS4_PDS_1Q00.xsd -S /home/runner/work/ldd-av/ldd-av/build/development/353cff8c31065136934a349710c69b5916016acd/1.26.0.0/PDS4_AV_1Q00_1000.sch /tmp/PDS4_PDS_1Q00.sch -t /home/runner/work/ldd-av/ldd-av/test//test1_VALID.xml
 
 Parameters:
    Targets                        [file:/home/runner/work/ldd-av/ldd-av/test/test1_VALID.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-av/ldd-av/build/development/628282f128073755526a82b7a8d6e3b089c855b6/1.26.0.0/PDS4_AV_1Q00_1000.xsd, file:/tmp/PDS4_PDS_1Q00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-av/ldd-av/build/development/628282f128073755526a82b7a8d6e3b089c855b6/1.26.0.0/PDS4_AV_1Q00_1000.sch, file:/tmp/PDS4_PDS_1Q00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-av/ldd-av/build/development/353cff8c31065136934a349710c69b5916016acd/1.26.0.0/PDS4_AV_1Q00_1000.xsd, file:/tmp/PDS4_PDS_1Q00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-av/ldd-av/build/development/353cff8c31065136934a349710c69b5916016acd/1.26.0.0/PDS4_AV_1Q00_1000.sch, file:/tmp/PDS4_PDS_1Q00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -53,5 +53,5 @@ Summary:
     1            warning.label.schema
 
 End of Report
-Completed execution in 5045 ms
+Completed execution in 5164 ms
 

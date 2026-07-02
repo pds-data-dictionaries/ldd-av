@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Mon Jun 29 23:53:09 UTC 2026 -->
+  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Thu Jul 02 18:15:43 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -130,7 +130,7 @@
 <xs:documentation>Class describing a Video track</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="video_codec" type="av:video_codec" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="video_codec" type="av:video_codec" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="bit_depth" type="av:bit_depth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="compressor_id" type="av:compressor_id" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="compressor_name" type="av:compressor_name" minOccurs="0" maxOccurs="1"> </xs:element>
