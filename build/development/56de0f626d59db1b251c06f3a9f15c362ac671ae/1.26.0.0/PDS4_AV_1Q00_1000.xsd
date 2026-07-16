@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Thu Jul 02 18:15:43 UTC 2026 -->
+  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Thu Jul 16 19:03:28 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -131,6 +131,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="video_codec" type="av:video_codec" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="acquisition_frame_rate" type="av:acquisition_frame_rate" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="bit_depth" type="av:bit_depth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="compressor_id" type="av:compressor_id" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="compressor_name" type="av:compressor_name" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -152,6 +153,29 @@
         common namespace.
       </xs:documentation>
     </xs:annotation>
+
+  <xs:simpleType name="acquisition_frame_rate_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="acquisition_frame_rate">
+    <xs:annotation>
+      <xs:documentation>Specifies the rate at which unique frames in a
+        movie were acquired by the original camera. This may not match
+        the playback frame rate for a variety of reasons, for example
+        removing frames or adding duplicate frames to make the movie
+        play at a standard frame rate. If not present, the assumption is
+        this matches the playback frame rate. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="av:acquisition_frame_rate_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Frame_Rate" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="audio_bits_per_sample">
     <xs:annotation>

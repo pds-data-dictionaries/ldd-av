@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Jul 02 18:15:43 UTC 2026
+   Time                   Thu Jul 16 19:03:28 UTC 2026
    Common Schema          [PDS4_PDS_1Q00.xsd]
    Common Schematron      [PDS4_PDS_1Q00.sch]
    IM Version Id:         1.26.0.0
@@ -29,8 +29,8 @@ Parameters:
 
 Summary:
    Classes                5
-   Attributes             38
-   Associations           43
+   Attributes             39
+   Associations           44
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -168,6 +168,12 @@ Parsed Input - Attributes:
    version                1.26
    value data type        ASCII_Short_String_Collapsed
    description            Specifies the video codec (Coder/Decoder) used for this data, in PDS terms. 
+
+   name                   acquisition_frame_rate
+   version                1.26
+   value data type        ASCII_Real
+   description            Specifies the rate at which unique frames in a movie were acquired by the original camera. This may not match the playback frame rate for a variety of reasons, for example removing frames or adding duplicate frames to make the movie play at a standard frame rate. If not present, the assumption is this matches the playback frame rate. 
+   unit of measure type   Units_of_Frame_Rate
 
    name                   bit_depth
    version                1.26
@@ -416,6 +422,11 @@ Parsed Input - Classes:
    Associations
 
       local identifier      av:video_codec
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:acquisition_frame_rate
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
