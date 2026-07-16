@@ -479,6 +479,24 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
+    <name>acquisition_frame_rate</name>
+    <version_id>1.0</version_id>
+    <local_identifier>acquisition_frame_rate</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Bob Deen</submitter_name>
+    <definition>Specifies the rate at which unique frames in a movie were acquired by the original camera.  This
+        may not match the playback frame rate for a variety of reasons, for example removing frames or adding
+        duplicate frames to make the movie play at a standard frame rate.  If not present, the assumption is
+        this matches the playback frame rate.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Frame_Rate</unit_of_measure_type>
+      <specified_unit_id>frame/s</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
     <name>bit_depth</name>
     <version_id>1.0</version_id>
     <local_identifier>bit_depth</local_identifier>
@@ -915,6 +933,12 @@
     <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>video_codec</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>acquisition_frame_rate</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
