@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Wed Sep 09 16:27:51 UTC 2026 -->
+  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Wed Sep 09 17:12:01 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -134,7 +134,6 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="video_codec" type="av:video_codec" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="acquisition_frame_rate" type="av:acquisition_frame_rate" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="bit_depth" type="av:bit_depth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="compressor_id" type="av:compressor_id" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="compressor_name" type="av:compressor_name" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -142,6 +141,7 @@
       <xs:element name="image_width" type="av:image_width" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="source_image_height" type="av:source_image_height" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="source_image_width" type="av:source_image_width" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="acquisition_frame_rate" type="av:acquisition_frame_rate" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="intermediate_frame_rate" type="av:intermediate_frame_rate" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="video_frame_rate" type="av:video_frame_rate" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
