@@ -14,8 +14,11 @@
   <namespace_id>av</namespace_id>
   <comment> This dictionary contains high level classes and attributes used in audio and visual products. It also
     contains classes with attributes used during active mission operations. Many of these classes are designed to be
-    extended into local mission dictionaries. ## CHANGE LOG ## 1.0.0.0 - initial version </comment>
-  <last_modification_date_time>2026-07-02T08:00:00Z</last_modification_date_time>
+    extended into local mission dictionaries.
+    
+    ## CHANGE LOG ## 1.0.0.0 - initial version
+  </comment>
+  <last_modification_date_time>2026-09-09T08:00:00Z</last_modification_date_time>
 
   <!--                     -->
   <!--  Attributes: BEGIN  -->
@@ -485,9 +488,9 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Bob Deen</submitter_name>
     <definition>Specifies the rate at which unique frames in a movie were acquired by the original camera.  This
-        may not match the playback frame rate for a variety of reasons, for example removing frames or adding
+        may not match the video_frame_rate for a variety of reasons, for example removing frames or adding
         duplicate frames to make the movie play at a standard frame rate.  If not present, the assumption is
-        this matches the playback frame rate.
+        this matches the video_frame_rate.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -563,6 +566,20 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
+    <name>intermediate_frame_rate</name>
+    <version_id>1.0</version_id>
+    <local_identifier>intermediate_frame_rate</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>R. Deenlanis</submitter_name>
+    <definition>Specifies the frame rate for an intermediate product that led to the current track.  Rates might be different for example to accommodate standard playback rates when converting the video to a different format.  If not present, the assumption is this matches the video_frame_rate.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Frequency</unit_of_measure_type>
+      <specified_unit_id>Hz</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
     <name>source_image_height</name>
     <version_id>1.0</version_id>
     <local_identifier>source_image_height</local_identifier>
@@ -594,7 +611,7 @@
     <local_identifier>video_frame_rate</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Rafael Alanis</submitter_name>
-    <definition>Number of video frames per second </definition>
+    <definition>Number of video frames per second in the track as stored in this product.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -983,6 +1000,12 @@
       <identifier_reference>source_image_width</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>intermediate_frame_rate</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
