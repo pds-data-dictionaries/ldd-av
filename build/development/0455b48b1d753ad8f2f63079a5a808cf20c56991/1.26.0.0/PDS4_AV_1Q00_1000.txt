@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Jul 16 19:03:28 UTC 2026
+   Time                   Wed Sep 09 16:27:51 UTC 2026
    Common Schema          [PDS4_PDS_1Q00.xsd]
    Common Schematron      [PDS4_PDS_1Q00.sch]
    IM Version Id:         1.26.0.0
@@ -29,8 +29,8 @@ Parameters:
 
 Summary:
    Classes                5
-   Attributes             39
-   Associations           44
+   Attributes             40
+   Associations           45
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -45,8 +45,11 @@ Parsed Input - Header:
    Namespace Id           av
    Comment                 This dictionary contains high level classes and attributes used in audio and visual products. It also
     contains classes with attributes used during active mission operations. Many of these classes are designed to be
-    extended into local mission dictionaries. ## CHANGE LOG ## 1.0.0.0 - initial version 
-   Last Modification Time 2026-07-02T08:00:00Z
+    extended into local mission dictionaries.
+    
+    ## CHANGE LOG ## 1.0.0.0 - initial version
+  
+   Last Modification Time 2026-09-09T08:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -172,7 +175,7 @@ Parsed Input - Attributes:
    name                   acquisition_frame_rate
    version                1.26
    value data type        ASCII_Real
-   description            Specifies the rate at which unique frames in a movie were acquired by the original camera. This may not match the playback frame rate for a variety of reasons, for example removing frames or adding duplicate frames to make the movie play at a standard frame rate. If not present, the assumption is this matches the playback frame rate. 
+   description            Specifies the rate at which unique frames in a movie were acquired by the original camera. This may not match the video_frame_rate for a variety of reasons, for example removing frames or adding duplicate frames to make the movie play at a standard frame rate. If not present, the assumption is this matches the video_frame_rate. 
    unit of measure type   Units_of_Frame_Rate
 
    name                   bit_depth
@@ -200,6 +203,12 @@ Parsed Input - Attributes:
    value data type        ASCII_Integer
    description            Width of the video image in pixels in its current form 
 
+   name                   intermediate_frame_rate
+   version                1.26
+   value data type        ASCII_Real
+   description            Specifies the frame rate for an intermediate product that led to the current track. Rates might be different for example to accommodate standard playback rates when converting the video to a different format. If not present, the assumption is this matches the video_frame_rate.
+   unit of measure type   Units_of_Frequency
+
    name                   source_image_height
    version                1.26
    value data type        ASCII_Integer
@@ -213,7 +222,7 @@ Parsed Input - Attributes:
    name                   video_frame_rate
    version                1.26
    value data type        ASCII_Real
-   description            Number of video frames per second 
+   description            Number of video frames per second in the track as stored in this product.
    unit of measure type   Units_of_Frequency
 
    name                   audio_codec
@@ -463,6 +472,11 @@ Parsed Input - Classes:
 
       local identifier      av:source_image_width
       minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      av:intermediate_frame_rate
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 

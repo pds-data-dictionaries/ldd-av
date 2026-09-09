@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Thu Jul 16 19:03:28 UTC 2026 -->
+  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Wed Sep 09 16:27:51 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -21,7 +21,10 @@
     <xs:documentation>
  This dictionary contains high level classes and attributes used in audio and visual products. It also
     contains classes with attributes used during active mission operations. Many of these classes are designed to be
-    extended into local mission dictionaries. ## CHANGE LOG ## 1.0.0.0 - initial version 
+    extended into local mission dictionaries.
+    
+    ## CHANGE LOG ## 1.0.0.0 - initial version
+  
     </xs:documentation>
   </xs:annotation>
  
@@ -139,6 +142,7 @@
       <xs:element name="image_width" type="av:image_width" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="source_image_height" type="av:source_image_height" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="source_image_width" type="av:source_image_width" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="intermediate_frame_rate" type="av:intermediate_frame_rate" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="video_frame_rate" type="av:video_frame_rate" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
@@ -165,10 +169,10 @@
     <xs:annotation>
       <xs:documentation>Specifies the rate at which unique frames in a
         movie were acquired by the original camera. This may not match
-        the playback frame rate for a variety of reasons, for example
+        the video_frame_rate for a variety of reasons, for example
         removing frames or adding duplicate frames to make the movie
         play at a standard frame rate. If not present, the assumption is
-        this matches the playback frame rate. </xs:documentation>
+        this matches the video_frame_rate. </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="av:acquisition_frame_rate_WO_Units">
@@ -441,6 +445,29 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="intermediate_frame_rate_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="intermediate_frame_rate">
+    <xs:annotation>
+      <xs:documentation>Specifies the frame rate for an intermediate
+        product that led to the current track. Rates might be different
+        for example to accommodate standard playback rates when
+        converting the video to a different format. If not present, the
+        assumption is this matches the
+        video_frame_rate.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="av:intermediate_frame_rate_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Frequency" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
   <xs:simpleType name="major_brand">
     <xs:annotation>
       <xs:documentation>Identifies the primary brand/specification of an
@@ -643,8 +670,8 @@
 
   <xs:complexType name="video_frame_rate">
     <xs:annotation>
-      <xs:documentation>Number of video frames per second
-        </xs:documentation>
+      <xs:documentation>Number of video frames per second in the track
+        as stored in this product.</xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="av:video_frame_rate_WO_Units">
