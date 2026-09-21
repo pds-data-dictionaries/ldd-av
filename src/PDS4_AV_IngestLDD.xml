@@ -17,8 +17,15 @@
     extended into local mission dictionaries.
     
     ## CHANGE LOG ## 1.0.0.0 - initial version
+
+    1.0.1.0 R. Deen
+    - Changed video_frame_rate and acquisition_frame rate from units of frequency to units of frame_rate.
+      This is a backward-incompatible change, but the LDD has been published for less than an hour so I think
+      this won't break anything and addresses a bug (it was inconsistent across acquisition, intermediate, and
+      video frame rates, and frame_rate is technically not quite the same as frequency).
+      
   </comment>
-  <last_modification_date_time>2026-09-09T08:00:00Z</last_modification_date_time>
+  <last_modification_date_time>2026-09-21T08:00:00Z</last_modification_date_time>
 
   <!--                     -->
   <!--  Attributes: BEGIN  -->
@@ -575,8 +582,8 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Frequency</unit_of_measure_type>
-      <specified_unit_id>Hz</specified_unit_id>
+      <unit_of_measure_type>Units_of_Frame_Rate</unit_of_measure_type>
+      <specified_unit_id>frame/s</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -615,8 +622,8 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Frequency</unit_of_measure_type>
-      <specified_unit_id>Hz</specified_unit_id>
+      <unit_of_measure_type>Units_of_Frame_Rate</unit_of_measure_type>
+      <specified_unit_id>frame/s</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
 
