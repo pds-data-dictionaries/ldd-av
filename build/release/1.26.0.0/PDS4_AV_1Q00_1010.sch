@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:av  Version:1.0.0.0 - Wed Sep 09 17:15:35 UTC 2026 -->
+  <!-- PDS4 Schematron for Name Space Id:av  Version:1.0.1.0 - Mon Sep 21 23:35:16 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -109,9 +109,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="av:Video_Track/av:intermediate_frame_rate">
-      <sch:assert test="@unit = ('GHz', 'Hz', 'MHz', 'THz', 'kHz', 'mHz')">
+      <sch:assert test="@unit = ('frames/s')">
         <title>av:Video_Track/av:intermediate_frame_rate/av:intermediate_frame_rate</title>
-        The attribute @unit must be equal to one of the following values 'GHz', 'Hz', 'MHz', 'THz', 'kHz', 'mHz'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'frames/s'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -123,9 +123,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="av:Video_Track/av:video_frame_rate">
-      <sch:assert test="@unit = ('GHz', 'Hz', 'MHz', 'THz', 'kHz', 'mHz')">
+      <sch:assert test="@unit = ('frames/s')">
         <title>av:Video_Track/av:video_frame_rate/av:video_frame_rate</title>
-        The attribute @unit must be equal to one of the following values 'GHz', 'Hz', 'MHz', 'THz', 'kHz', 'mHz'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'frames/s'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
