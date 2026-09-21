@@ -3,14 +3,14 @@ PDS Validate Tool Report
 
 Configuration:
    Version      4.2.0
-   Date         2026-09-21T23:17:42Z
-   CLI args     -R pds4.label --skip-content-validation -x /home/runner/work/ldd-av/ldd-av/build/development/c28e512196bb548a25ca3d07e72da20715f4e6ae/1.26.0.0/PDS4_AV_1Q00_1000.xsd /tmp/PDS4_PDS_1Q00.xsd -S /home/runner/work/ldd-av/ldd-av/build/development/c28e512196bb548a25ca3d07e72da20715f4e6ae/1.26.0.0/PDS4_AV_1Q00_1000.sch /tmp/PDS4_PDS_1Q00.sch -t /home/runner/work/ldd-av/ldd-av/test//test1_VALID.xml
+   Date         2026-09-21T23:22:45Z
+   CLI args     -R pds4.label --skip-content-validation -x /home/runner/work/ldd-av/ldd-av/build/development/3523d06860f1f1193f8d9a8c2f16c2fe3f166a3a/1.26.0.0/PDS4_AV_1Q00_1000.xsd /tmp/PDS4_PDS_1Q00.xsd -S /home/runner/work/ldd-av/ldd-av/build/development/3523d06860f1f1193f8d9a8c2f16c2fe3f166a3a/1.26.0.0/PDS4_AV_1Q00_1000.sch /tmp/PDS4_PDS_1Q00.sch -t /home/runner/work/ldd-av/ldd-av/test//test1_VALID.xml
 
 Parameters:
    Targets                        [file:/home/runner/work/ldd-av/ldd-av/test/test1_VALID.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-av/ldd-av/build/development/c28e512196bb548a25ca3d07e72da20715f4e6ae/1.26.0.0/PDS4_AV_1Q00_1000.xsd, file:/tmp/PDS4_PDS_1Q00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-av/ldd-av/build/development/c28e512196bb548a25ca3d07e72da20715f4e6ae/1.26.0.0/PDS4_AV_1Q00_1000.sch, file:/tmp/PDS4_PDS_1Q00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-av/ldd-av/build/development/3523d06860f1f1193f8d9a8c2f16c2fe3f166a3a/1.26.0.0/PDS4_AV_1Q00_1000.xsd, file:/tmp/PDS4_PDS_1Q00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-av/ldd-av/build/development/3523d06860f1f1193f8d9a8c2f16c2fe3f166a3a/1.26.0.0/PDS4_AV_1Q00_1000.sch, file:/tmp/PDS4_PDS_1Q00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -25,9 +25,9 @@ Product Level Validation Results
 
   FAIL: file:/home/runner/work/ldd-av/ldd-av/test/test1_VALID.xml (urn:nasa:pds:bundle:collection:product::1.0)
       WARNING  [warning.label.schema]   Cannot check versioning because no Schema given.
-      ERROR  [error.label.schema]   line 72, 46: cvc-enumeration-valid: Value 'Hz' is not facet-valid with respect to enumeration '[frames/s]'. It must be a value from the enumeration.
-      ERROR  [error.label.schema]   line 72, 46: cvc-attribute.3: The value 'Hz' of attribute 'unit' on element 'av:video_frame_rate' is not valid with respect to its type, 'Units_of_Frame_Rate'.
-      ERROR  [error.label.schematron]   line 72, 46: The attribute @unit must be equal to one of the following values 'frames/s'.
+      ERROR  [error.label.schema]   line 72, 51: cvc-enumeration-valid: Value 'frame/s' is not facet-valid with respect to enumeration '[frames/s]'. It must be a value from the enumeration.
+      ERROR  [error.label.schema]   line 72, 51: cvc-attribute.3: The value 'frame/s' of attribute 'unit' on element 'av:video_frame_rate' is not valid with respect to its type, 'Units_of_Frame_Rate'.
+      ERROR  [error.label.schematron]   line 72, 51: The attribute @unit must be equal to one of the following values 'frames/s'.
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
       WARNING  [warning.label.context_ref_mismatch]   line 29: Context reference name mismatch. LIDVID: 'urn:nasa:pds:context:investigation:individual.none'. Value: 'None' Expected one of: '[No Specific Investigation]'
         1 product validation(s) completed
@@ -58,5 +58,5 @@ Summary:
     1            warning.label.schema
 
 End of Report
-Completed execution in 5008 ms
+Completed execution in 3483 ms
 
