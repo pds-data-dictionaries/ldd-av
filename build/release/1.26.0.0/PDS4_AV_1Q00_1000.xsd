@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Wed Sep 09 17:15:35 UTC 2026 -->
+  <!-- PDS4 XML/Schema for Name Space Id:av  Version:1.0.0.0 - Mon Sep 21 23:32:42 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -24,6 +24,13 @@
     extended into local mission dictionaries.
     
     ## CHANGE LOG ## 1.0.0.0 - initial version
+
+    1.0.1.0 - R. Deen 
+    - Changed video_frame_rate and acquisition_frame rate from units of frequency to units of frame_rate.
+      This is a backward-incompatible change, but the LDD has been published for less than an hour so I think
+      this won't break anything and addresses a bug (it was inconsistent across acquisition, intermediate, and
+      video frame rates, and frame_rate is technically not quite the same as frequency).
+      
   
     </xs:documentation>
   </xs:annotation>
@@ -463,7 +470,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="av:intermediate_frame_rate_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Frequency" use="required" />
+        <xs:attribute name="unit" type="pds:Units_of_Frame_Rate" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -675,7 +682,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="av:video_frame_rate_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Frequency" use="required" />
+        <xs:attribute name="unit" type="pds:Units_of_Frame_Rate" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>

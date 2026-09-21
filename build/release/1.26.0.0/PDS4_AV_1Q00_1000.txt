@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Sep 09 17:15:35 UTC 2026
+   Time                   Mon Sep 21 23:32:42 UTC 2026
    Common Schema          [PDS4_PDS_1Q00.xsd]
    Common Schematron      [PDS4_PDS_1Q00.sch]
    IM Version Id:         1.26.0.0
@@ -48,8 +48,15 @@ Parsed Input - Header:
     extended into local mission dictionaries.
     
     ## CHANGE LOG ## 1.0.0.0 - initial version
+
+    1.0.1.0 - R. Deen 
+    - Changed video_frame_rate and acquisition_frame rate from units of frequency to units of frame_rate.
+      This is a backward-incompatible change, but the LDD has been published for less than an hour so I think
+      this won't break anything and addresses a bug (it was inconsistent across acquisition, intermediate, and
+      video frame rates, and frame_rate is technically not quite the same as frequency).
+      
   
-   Last Modification Time 2026-09-09T08:00:00Z
+   Last Modification Time 2026-09-21T08:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -207,7 +214,7 @@ Parsed Input - Attributes:
    version                1.26
    value data type        ASCII_Real
    description            Specifies the frame rate for an intermediate product that led to the current track. Rates might be different for example to accommodate standard playback rates when converting the video to a different format. If not present, the assumption is this matches the video_frame_rate.
-   unit of measure type   Units_of_Frequency
+   unit of measure type   Units_of_Frame_Rate
 
    name                   source_image_height
    version                1.26
@@ -223,7 +230,7 @@ Parsed Input - Attributes:
    version                1.26
    value data type        ASCII_Real
    description            Number of video frames per second in the track as stored in this product.
-   unit of measure type   Units_of_Frequency
+   unit of measure type   Units_of_Frame_Rate
 
    name                   audio_codec
    version                1.26

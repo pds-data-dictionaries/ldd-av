@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon Sep 21 23:27:18 UTC 2026
+   Time                   Mon Sep 21 23:32:42 UTC 2026
    Common Schema          [PDS4_PDS_1Q00.xsd]
    Common Schematron      [PDS4_PDS_1Q00.sch]
    IM Version Id:         1.26.0.0
@@ -49,7 +49,7 @@ Parsed Input - Header:
     
     ## CHANGE LOG ## 1.0.0.0 - initial version
 
-    1.0.1.0 - R. Deen
+    1.0.1.0 - R. Deen 
     - Changed video_frame_rate and acquisition_frame rate from units of frequency to units of frame_rate.
       This is a backward-incompatible change, but the LDD has been published for less than an hour so I think
       this won't break anything and addresses a bug (it was inconsistent across acquisition, intermediate, and
