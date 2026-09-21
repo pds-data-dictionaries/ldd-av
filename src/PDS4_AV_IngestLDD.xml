@@ -18,7 +18,7 @@
     
     ## CHANGE LOG ## 1.0.0.0 - initial version
 
-    1.0.1.0 - R. Deen
+    1.0.1.0 - R. Deen 
     - Changed video_frame_rate and acquisition_frame rate from units of frequency to units of frame_rate.
       This is a backward-incompatible change, but the LDD has been published for less than an hour so I think
       this won't break anything and addresses a bug (it was inconsistent across acquisition, intermediate, and
